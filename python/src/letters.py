@@ -20,9 +20,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 """ Reads a file of phrases and calculates the total letter frequency in the entire file."""
+import argparse
 
 def count_letters():
     pass
 
 if __name__ == '__main__':
-    count_letters()
+    PARSER = argparse.ArgumentParser()
+    PARSER.add_argument('-f', '--file', dest='file', action='store')
+    ARGS = PARSER.parse_args()
+    print(ARGS.file)
+    
