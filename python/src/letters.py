@@ -19,10 +19,11 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-""" Reads a file of phrases and calculates the total letter frequency in the entire file."""
+""" Read a file of phrases and calculate the total letter frequency in the entire file."""
 import argparse
 
 def count_letters(file_to_count):
+    """ Count the letters in each phrase, total them, and report percentage of occurrence for each. """
     a_count = 0
     b_count = 0
     c_count = 0
