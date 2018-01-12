@@ -22,17 +22,19 @@
 """ Reads a file of phrases and calculates the total letter frequency in the entire file."""
 import argparse
 
-def count_letters(file_to_parse):
-    print("Counting letters for " + file_to_parse.name)
+def count_letters(file_to_count):
+    try:
+        file = open(file_to_count, 'r')
+        for line in file:
+            print(line)
+    except FileNotFoundError:
+        print(ARGS.file + " not found!")
 
 if __name__ == '__main__':
     PARSER = argparse.ArgumentParser()
     PARSER.add_argument('-f', '--file', dest='file', action='store')
     ARGS = PARSER.parse_args()
+    count_letters(ARGS.file)
 
-    try:
-        file = open(ARGS.file, 'r')
-        count_letters(file)
-    except FileNotFoundError:
-        print(ARGS.file + " not found!")
+  
     
