@@ -51,7 +51,7 @@ def count_letters(file_to_count):
     y_count = 0
     z_count = 0
 
-
+    PADDING = 6
     try:
         file = open(file_to_count, 'r')
         for line in file:
@@ -89,40 +89,40 @@ def count_letters(file_to_count):
         
         print("RSTLNE")
         print("==========")
-        print("R: " + str(round(r_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("S: " + str(round(s_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("T: " + str(round(t_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("L: " + str(round(l_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("N: " + str(round(n_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("E: " + str(round(e_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("R: " + (str(round(r_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("S: " + (str(round(s_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("T: " + (str(round(t_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("L: " + (str(round(l_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("N: " + (str(round(n_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("E: " + (str(round(e_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
         print()
 
         print("VOWELS")
         print("==========")
-        print("A: " + str(round(a_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("I: " + str(round(i_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("O: " + str(round(o_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("U: " + str(round(u_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("A: " + (str(round(a_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("I: " + (str(round(i_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("O: " + (str(round(o_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("U: " + (str(round(u_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
         print()
 
         print("CONSONANTS")
         print("==========")
-        print("B: " + str(round(b_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("C: " + str(round(c_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("D: " + str(round(d_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("F: " + str(round(f_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("G: " + str(round(g_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("H: " + str(round(h_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("J: " + str(round(j_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("K: " + str(round(k_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("M: " + str(round(m_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("P: " + str(round(p_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("Q: " + str(round(q_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("V: " + str(round(v_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("W: " + str(round(w_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("X: " + str(round(x_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("Y: " + str(round(y_count/TOTAL_LETTERS * 100, 2)) + "%")
-        print("Z: " + str(round(z_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("B: " + (str(round(b_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("C: " + (str(round(c_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("D: " + (str(round(d_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("F: " + (str(round(f_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("G: " + (str(round(g_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("H: " + (str(round(h_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("J: " + (str(round(j_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("K: " + (str(round(k_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("M: " + (str(round(m_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("P: " + (str(round(p_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("Q: " + (str(round(q_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("V: " + (str(round(v_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("W: " + (str(round(w_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("X: " + (str(round(x_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("Y: " + (str(round(y_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
+        print("Z: " + (str(round(z_count/TOTAL_LETTERS * 100, 2)) + "%").rjust(PADDING))
 
     except FileNotFoundError:
         print(ARGS.file + " not found!")
@@ -132,6 +132,3 @@ if __name__ == '__main__':
     PARSER.add_argument('-f', '--file', dest='file', action='store')
     ARGS = PARSER.parse_args()
     count_letters(ARGS.file)
-
-  
-    
