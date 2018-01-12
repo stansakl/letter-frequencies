@@ -23,10 +23,106 @@
 import argparse
 
 def count_letters(file_to_count):
+    a_count = 0
+    b_count = 0
+    c_count = 0
+    d_count = 0
+    e_count = 0
+    f_count = 0
+    g_count = 0
+    h_count = 0
+    i_count = 0
+    j_count = 0
+    k_count = 0
+    l_count = 0
+    m_count = 0
+    n_count = 0
+    o_count = 0
+    p_count = 0
+    q_count = 0
+    r_count = 0
+    s_count = 0
+    t_count = 0
+    u_count = 0
+    v_count = 0
+    w_count = 0
+    x_count = 0
+    y_count = 0
+    z_count = 0
+
+
     try:
         file = open(file_to_count, 'r')
         for line in file:
-            print(line)
+            a_count += line.upper().count('A')
+            b_count += line.upper().count('B')
+            c_count += line.upper().count('C')
+            d_count += line.upper().count('D')
+            e_count += line.upper().count('E')
+            f_count += line.upper().count('F')
+            g_count += line.upper().count('G')
+            h_count += line.upper().count('H')
+            i_count += line.upper().count('I')
+            j_count += line.upper().count('J')
+            k_count += line.upper().count('K')
+            l_count += line.upper().count('L')
+            m_count += line.upper().count('M')
+            n_count += line.upper().count('N')
+            o_count += line.upper().count('O')
+            p_count += line.upper().count('P')
+            q_count += line.upper().count('Q')
+            r_count += line.upper().count('R')
+            s_count += line.upper().count('S')
+            t_count += line.upper().count('T')
+            u_count += line.upper().count('U')
+            v_count += line.upper().count('V')
+            w_count += line.upper().count('W')
+            x_count += line.upper().count('X')
+            y_count += line.upper().count('Y')
+            z_count += line.upper().count('Z')
+        
+        TOTAL_LETTERS = a_count + b_count + c_count + d_count + e_count + f_count + g_count + h_count + i_count + j_count 
+        + k_count + l_count + m_count + n_count + o_count + p_count + q_count + r_count + s_count + t_count + u_count 
+        + v_count + w_count + x_count + y_count + z_count
+
+        
+        print("RSTLNE")
+        print("==========")
+        print("R: " + str(round(r_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("S: " + str(round(s_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("T: " + str(round(t_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("L: " + str(round(l_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("N: " + str(round(n_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("E: " + str(round(e_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print()
+
+        print("VOWELS")
+        print("==========")
+        print("A: " + str(round(a_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("I: " + str(round(i_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("O: " + str(round(o_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("U: " + str(round(u_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print()
+
+        print("CONSONANTS")
+        print("==========")
+        print("B: " + str(round(b_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("C: " + str(round(c_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("D: " + str(round(d_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("F: " + str(round(f_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("G: " + str(round(g_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("H: " + str(round(h_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("J: " + str(round(j_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("K: " + str(round(k_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("M: " + str(round(m_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("P: " + str(round(p_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("Q: " + str(round(q_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("V: " + str(round(v_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("W: " + str(round(w_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("X: " + str(round(x_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("Y: " + str(round(y_count/TOTAL_LETTERS * 100, 2)) + "%")
+        print("Z: " + str(round(z_count/TOTAL_LETTERS * 100, 2)) + "%")
+
     except FileNotFoundError:
         print(ARGS.file + " not found!")
 
