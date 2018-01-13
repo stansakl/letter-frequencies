@@ -40,6 +40,33 @@ void usage() {
 }
 
 void count_letters(char const *file_to_count) {
+    int a_count = 0;
+    int b_count = 0;
+    int c_count = 0;
+    int d_count = 0;
+    int e_count = 0;
+    int f_count = 0;
+    int g_count = 0;
+    int h_count = 0;
+    int i_count = 0;
+    int j_count = 0;
+    int k_count = 0;
+    int l_count = 0;
+    int m_count = 0;
+    int n_count = 0;
+    int o_count = 0;
+    int p_count = 0;
+    int q_count = 0;
+    int r_count = 0;
+    int s_count = 0;
+    int t_count = 0;
+    int u_count = 0;
+    int v_count = 0;
+    int w_count = 0;
+    int x_count = 0;
+    int y_count = 0;
+    int z_count = 0;
+    
     FILE *fp;
     fp = fopen(file_to_count, "r");
 
