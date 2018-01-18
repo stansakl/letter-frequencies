@@ -27,108 +27,82 @@ def count_letters(file_to_count):
 
     letters = {'A': 0, 'B': 0, 'B': 0, 'C': 0, 'D': 0, 'E': 0, 'F': 0, 'G': 0,
                'H': 0, 'I': 0, 'J': 0, 'K': 0, 'L': 0, 'M': 0, 'N': 0, 'O': 0,
-               'P': 0, 'Q': 0, 'R': 0, 's':0, 'T': 0, 'U': 0, 'V': 0, 'W': 0,
+               'P': 0, 'Q': 0, 'R': 0, 'S':0, 'T': 0, 'U': 0, 'V': 0, 'W': 0,
                'X': 0, 'Y': 0, 'Z': 0}
-    a_count = 0
-    b_count = 0
-    c_count = 0
-    d_count = 0
-    e_count = 0
-    f_count = 0
-    g_count = 0
-    h_count = 0
-    i_count = 0
-    j_count = 0
-    k_count = 0
-    l_count = 0
-    m_count = 0
-    n_count = 0
-    o_count = 0
-    p_count = 0
-    q_count = 0
-    r_count = 0
-    s_count = 0
-    t_count = 0
-    u_count = 0
-    v_count = 0
-    w_count = 0
-    x_count = 0
-    y_count = 0
-    z_count = 0
-
-    PADDING = 6
     try:
         file = open(file_to_count, 'r')
         for line in file:
             letters['A'] += line.upper().count('A')
-            a_count += line.upper().count('A')
-            b_count += line.upper().count('B')
-            c_count += line.upper().count('C')
-            d_count += line.upper().count('D')
-            e_count += line.upper().count('E')
-            f_count += line.upper().count('F')
-            g_count += line.upper().count('G')
-            h_count += line.upper().count('H')
-            i_count += line.upper().count('I')
-            j_count += line.upper().count('J')
-            k_count += line.upper().count('K')
-            l_count += line.upper().count('L')
-            m_count += line.upper().count('M')
-            n_count += line.upper().count('N')
-            o_count += line.upper().count('O')
-            p_count += line.upper().count('P')
-            q_count += line.upper().count('Q')
-            r_count += line.upper().count('R')
-            s_count += line.upper().count('S')
-            t_count += line.upper().count('T')
-            u_count += line.upper().count('U')
-            v_count += line.upper().count('V')
-            w_count += line.upper().count('W')
-            x_count += line.upper().count('X')
-            y_count += line.upper().count('Y')
-            z_count += line.upper().count('Z')
-        
-        TOTAL_LETTERS = a_count + b_count + c_count + d_count + e_count + f_count + g_count + h_count + i_count + j_count 
-        + k_count + l_count + m_count + n_count + o_count + p_count + q_count + r_count + s_count + t_count + u_count 
-        + v_count + w_count + x_count + y_count + z_count
+            letters['B'] += line.upper().count('B')
+            letters['C'] += line.upper().count('C')
+            letters['D'] += line.upper().count('D')
+            letters['E'] += line.upper().count('E')
+            letters['F'] += line.upper().count('F')
+            letters['G'] += line.upper().count('G')
+            letters['H'] += line.upper().count('H')
+            letters['I'] += line.upper().count('I')
+            letters['J'] += line.upper().count('J')
+            letters['K'] += line.upper().count('K')
+            letters['L'] += line.upper().count('L')
+            letters['M'] += line.upper().count('M')
+            letters['N'] += line.upper().count('N')
+            letters['O'] += line.upper().count('O')
+            letters['P'] += line.upper().count('P')
+            letters['Q'] += line.upper().count('Q')
+            letters['R'] += line.upper().count('R')
+            letters['S'] += line.upper().count('S')
+            letters['T'] += line.upper().count('T')
+            letters['U'] += line.upper().count('U')
+            letters['V'] += line.upper().count('V')
+            letters['W'] += line.upper().count('W')
+            letters['X'] += line.upper().count('X')
+            letters['Y'] += line.upper().count('Y')
+            letters['Z'] += line.upper().count('Z')
 
-        
+        TOTAL_LETTERS = letters['A'] + letters['B'] + letters['C'] + letters['D']
+        + letters['E'] + letters['F'] + letters['G'] + letters['H']
+        + letters['I'] + letters['J'] + letters['K'] + letters['L']
+        + letters['M'] + letters['N'] + letters['O'] + letters['P']
+        + letters['Q'] + letters['R'] + letters['S'] + letters['T']
+        + letters['U'] + letters['V'] + letters['W'] + letters['X']
+        + letters['Y'] + letters['Z']
+
         print("RSTLNE")
         print("==========")
-        print("R: {:5.2f}%".format(r_count/TOTAL_LETTERS * 100))
-        print("S: {:5.2f}%".format(s_count/TOTAL_LETTERS * 100))
-        print("T: {:5.2f}%".format(t_count/TOTAL_LETTERS * 100))
-        print("L: {:5.2f}%".format(l_count/TOTAL_LETTERS * 100))
-        print("N: {:5.2f}%".format(n_count/TOTAL_LETTERS * 100))
-        print("E: {:5.2f}%".format(e_count/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['R']/TOTAL_LETTERS * 100))
+        print("S: {:5.2f}%".format(letters['S']/TOTAL_LETTERS * 100))
+        print("T: {:5.2f}%".format(letters['T']/TOTAL_LETTERS * 100))
+        print("L: {:5.2f}%".format(letters['L']/TOTAL_LETTERS * 100))
+        print("N: {:5.2f}%".format(letters['N']/TOTAL_LETTERS * 100))
+        print("E: {:5.2f}%".format(letters['E']/TOTAL_LETTERS * 100))
         print()
 
         print("VOWELS")
         print("==========")
-        print("A: {:5.2f}%".format(a_count/TOTAL_LETTERS * 100))
-        print("I: {:5.2f}%".format(i_count/TOTAL_LETTERS * 100))
-        print("O: {:5.2f}%".format(o_count/TOTAL_LETTERS * 100))
-        print("U: {:5.2f}%".format(u_count/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['A']/TOTAL_LETTERS * 100))
+        print("S: {:5.2f}%".format(letters['I']/TOTAL_LETTERS * 100))
+        print("T: {:5.2f}%".format(letters['O']/TOTAL_LETTERS * 100))
+        print("L: {:5.2f}%".format(letters['U']/TOTAL_LETTERS * 100))
         print()
 
         print("CONSONANTS")
         print("==========")
-        print("B: {:5.2f}%".format(b_count/TOTAL_LETTERS * 100))
-        print("C: {:5.2f}%".format(c_count/TOTAL_LETTERS * 100))
-        print("D: {:5.2f}%".format(d_count/TOTAL_LETTERS * 100))
-        print("F: {:5.2f}%".format(f_count/TOTAL_LETTERS * 100))
-        print("G: {:5.2f}%".format(g_count/TOTAL_LETTERS * 100))
-        print("H: {:5.2f}%".format(h_count/TOTAL_LETTERS * 100))
-        print("J: {:5.2f}%".format(j_count/TOTAL_LETTERS * 100))
-        print("K: {:5.2f}%".format(k_count/TOTAL_LETTERS * 100))
-        print("M: {:5.2f}%".format(m_count/TOTAL_LETTERS * 100))
-        print("P: {:5.2f}%".format(p_count/TOTAL_LETTERS * 100))
-        print("Q: {:5.2f}%".format(q_count/TOTAL_LETTERS * 100))
-        print("V: {:5.2f}%".format(v_count/TOTAL_LETTERS * 100))
-        print("W: {:5.2f}%".format(w_count/TOTAL_LETTERS * 100))
-        print("X: {:5.2f}%".format(x_count/TOTAL_LETTERS * 100))
-        print("Y: {:5.2f}%".format(y_count/TOTAL_LETTERS * 100))
-        print("Z: {:5.2f}%".format(z_count/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['B']/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['C']/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['D']/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['F']/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['G']/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['H']/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['J']/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['K']/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['M']/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['P']/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['Q']/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['V']/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['W']/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['X']/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['Y']/TOTAL_LETTERS * 100))
+        print("R: {:5.2f}%".format(letters['Z']/TOTAL_LETTERS * 100))
 
     except FileNotFoundError:
         print(ARGS.file + " not found!")
