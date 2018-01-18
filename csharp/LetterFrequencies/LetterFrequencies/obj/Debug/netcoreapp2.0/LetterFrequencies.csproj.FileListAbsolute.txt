@@ -1,0 +1,11 @@
+D:\Code\projects\letter-frequencies\csharp\LetterFrequencies\LetterFrequencies\bin\Debug\netcoreapp2.0\LetterFrequencies.deps.json
+D:\Code\projects\letter-frequencies\csharp\LetterFrequencies\LetterFrequencies\bin\Debug\netcoreapp2.0\LetterFrequencies.runtimeconfig.json
+D:\Code\projects\letter-frequencies\csharp\LetterFrequencies\LetterFrequencies\bin\Debug\netcoreapp2.0\LetterFrequencies.runtimeconfig.dev.json
+D:\Code\projects\letter-frequencies\csharp\LetterFrequencies\LetterFrequencies\bin\Debug\netcoreapp2.0\LetterFrequencies.dll
+D:\Code\projects\letter-frequencies\csharp\LetterFrequencies\LetterFrequencies\bin\Debug\netcoreapp2.0\LetterFrequencies.pdb
+D:\Code\projects\letter-frequencies\csharp\LetterFrequencies\LetterFrequencies\obj\Debug\netcoreapp2.0\LetterFrequencies.csprojResolveAssemblyReference.cache
+D:\Code\projects\letter-frequencies\csharp\LetterFrequencies\LetterFrequencies\obj\Debug\netcoreapp2.0\LetterFrequencies.csproj.CoreCompileInputs.cache
+D:\Code\projects\letter-frequencies\csharp\LetterFrequencies\LetterFrequencies\obj\Debug\netcoreapp2.0\LetterFrequencies.AssemblyInfoInputs.cache
+D:\Code\projects\letter-frequencies\csharp\LetterFrequencies\LetterFrequencies\obj\Debug\netcoreapp2.0\LetterFrequencies.AssemblyInfo.cs
+D:\Code\projects\letter-frequencies\csharp\LetterFrequencies\LetterFrequencies\obj\Debug\netcoreapp2.0\LetterFrequencies.dll
+D:\Code\projects\letter-frequencies\csharp\LetterFrequencies\LetterFrequencies\obj\Debug\netcoreapp2.0\LetterFrequencies.pdb
