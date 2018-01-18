@@ -24,6 +24,11 @@ import argparse
 
 def count_letters(file_to_count):
     """ Count the letters in each phrase, total them, and report percentage of occurrence for each. """
+
+    letters = {'A': 0, 'B': 0, 'B': 0, 'C': 0, 'D': 0, 'E': 0, 'F': 0, 'G': 0,
+               'H': 0, 'I': 0, 'J': 0, 'K': 0, 'L': 0, 'M': 0, 'N': 0, 'O': 0,
+               'P': 0, 'Q': 0, 'R': 0, 's':0, 'T': 0, 'U': 0, 'V': 0, 'W': 0,
+               'X': 0, 'Y': 0, 'Z': 0}
     a_count = 0
     b_count = 0
     c_count = 0
@@ -55,6 +60,7 @@ def count_letters(file_to_count):
     try:
         file = open(file_to_count, 'r')
         for line in file:
+            letters['A'] += line.upper().count('A')
             a_count += line.upper().count('A')
             b_count += line.upper().count('B')
             c_count += line.upper().count('C')
