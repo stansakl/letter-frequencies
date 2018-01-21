@@ -21,6 +21,7 @@
 # SOFTWARE.
 """ Read a file of phrases and calculate the total letter frequency in the entire file."""
 import argparse
+import sys
 
 def count_letters(file_to_count):
     """ Count the letters in each phrase, total them, and report percentage of occurrence for each. """
@@ -59,7 +60,7 @@ def count_letters(file_to_count):
             letters['Y'] += line.upper().count('Y')
             letters['Z'] += line.upper().count('Z')
 
-        TOTAL_LETTERS = letters['A'] + letters['B'] + letters['C'] + letters['D'] \
+        total_letters = letters['A'] + letters['B'] + letters['C'] + letters['D'] \
         + letters['E'] + letters['F'] + letters['G'] + letters['H'] \
         + letters['I'] + letters['J'] + letters['K'] + letters['L'] \
         + letters['M'] + letters['N'] + letters['O'] + letters['P'] \
@@ -69,40 +70,40 @@ def count_letters(file_to_count):
 
         print("RSTLNE")
         print("==========")
-        print("R: {:5.2f}%".format(calculate_percentage(letters['R'], TOTAL_LETTERS)))
-        print("S: {:5.2f}%".format(calculate_percentage(letters['S'], TOTAL_LETTERS)))
-        print("T: {:5.2f}%".format(calculate_percentage(letters['T'], TOTAL_LETTERS)))
-        print("L: {:5.2f}%".format(calculate_percentage(letters['L'], TOTAL_LETTERS)))
-        print("N: {:5.2f}%".format(calculate_percentage(letters['N'], TOTAL_LETTERS)))
-        print("E: {:5.2f}%".format(calculate_percentage(letters['E'], TOTAL_LETTERS)))
+        print("R: {:5.2f}%".format(calculate_percentage(letters['R'], total_letters)))
+        print("S: {:5.2f}%".format(calculate_percentage(letters['S'], total_letters)))
+        print("T: {:5.2f}%".format(calculate_percentage(letters['T'], total_letters)))
+        print("L: {:5.2f}%".format(calculate_percentage(letters['L'], total_letters)))
+        print("N: {:5.2f}%".format(calculate_percentage(letters['N'], total_letters)))
+        print("E: {:5.2f}%".format(calculate_percentage(letters['E'], total_letters)))
         print()
 
         print("VOWELS")
         print("==========")
-        print("A: {:5.2f}%".format(calculate_percentage(letters['A'], TOTAL_LETTERS)))
-        print("I: {:5.2f}%".format(calculate_percentage(letters['I'], TOTAL_LETTERS)))
-        print("O: {:5.2f}%".format(calculate_percentage(letters['O'], TOTAL_LETTERS)))
-        print("U: {:5.2f}%".format(calculate_percentage(letters['U'], TOTAL_LETTERS)))
+        print("A: {:5.2f}%".format(calculate_percentage(letters['A'], total_letters)))
+        print("I: {:5.2f}%".format(calculate_percentage(letters['I'], total_letters)))
+        print("O: {:5.2f}%".format(calculate_percentage(letters['O'], total_letters)))
+        print("U: {:5.2f}%".format(calculate_percentage(letters['U'], total_letters)))
         print()
 
         print("CONSONANTS")
         print("==========")
-        print("B: {:5.2f}%".format(calculate_percentage(letters['B'], TOTAL_LETTERS)))
-        print("C: {:5.2f}%".format(calculate_percentage(letters['C'], TOTAL_LETTERS)))
-        print("D: {:5.2f}%".format(calculate_percentage(letters['D'], TOTAL_LETTERS)))
-        print("F: {:5.2f}%".format(calculate_percentage(letters['F'], TOTAL_LETTERS)))
-        print("G: {:5.2f}%".format(calculate_percentage(letters['G'], TOTAL_LETTERS)))
-        print("H: {:5.2f}%".format(calculate_percentage(letters['H'], TOTAL_LETTERS)))
-        print("J: {:5.2f}%".format(calculate_percentage(letters['J'], TOTAL_LETTERS)))
-        print("K: {:5.2f}%".format(calculate_percentage(letters['K'], TOTAL_LETTERS)))
-        print("M: {:5.2f}%".format(calculate_percentage(letters['M'], TOTAL_LETTERS)))
-        print("P: {:5.2f}%".format(calculate_percentage(letters['P'], TOTAL_LETTERS)))
-        print("Q: {:5.2f}%".format(calculate_percentage(letters['Q'], TOTAL_LETTERS)))
-        print("V: {:5.2f}%".format(calculate_percentage(letters['V'], TOTAL_LETTERS)))
-        print("W: {:5.2f}%".format(calculate_percentage(letters['W'], TOTAL_LETTERS)))
-        print("X: {:5.2f}%".format(calculate_percentage(letters['X'], TOTAL_LETTERS)))
-        print("Y: {:5.2f}%".format(calculate_percentage(letters['Y'], TOTAL_LETTERS)))
-        print("Z: {:5.2f}%".format(calculate_percentage(letters['Z'], TOTAL_LETTERS)))
+        print("B: {:5.2f}%".format(calculate_percentage(letters['B'], total_letters)))
+        print("C: {:5.2f}%".format(calculate_percentage(letters['C'], total_letters)))
+        print("D: {:5.2f}%".format(calculate_percentage(letters['D'], total_letters)))
+        print("F: {:5.2f}%".format(calculate_percentage(letters['F'], total_letters)))
+        print("G: {:5.2f}%".format(calculate_percentage(letters['G'], total_letters)))
+        print("H: {:5.2f}%".format(calculate_percentage(letters['H'], total_letters)))
+        print("J: {:5.2f}%".format(calculate_percentage(letters['J'], total_letters)))
+        print("K: {:5.2f}%".format(calculate_percentage(letters['K'], total_letters)))
+        print("M: {:5.2f}%".format(calculate_percentage(letters['M'], total_letters)))
+        print("P: {:5.2f}%".format(calculate_percentage(letters['P'], total_letters)))
+        print("Q: {:5.2f}%".format(calculate_percentage(letters['Q'], total_letters)))
+        print("V: {:5.2f}%".format(calculate_percentage(letters['V'], total_letters)))
+        print("W: {:5.2f}%".format(calculate_percentage(letters['W'], total_letters)))
+        print("X: {:5.2f}%".format(calculate_percentage(letters['X'], total_letters)))
+        print("Y: {:5.2f}%".format(calculate_percentage(letters['Y'], total_letters)))
+        print("Z: {:5.2f}%".format(calculate_percentage(letters['Z'], total_letters)))
 
     except FileNotFoundError:
         print(ARGS.file + " not found!")
@@ -115,4 +116,10 @@ if __name__ == '__main__':
     PARSER = argparse.ArgumentParser()
     PARSER.add_argument('-f', '--file', dest='file', action='store')
     ARGS = PARSER.parse_args()
+    print(len(sys.argv))
+
+    if len(sys.argv) == 1:
+        PARSER.print_help()
+        exit()
+
     count_letters(ARGS.file)
