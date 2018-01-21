@@ -115,7 +115,7 @@ def calculate_percentage(letter, total_letters):
 if __name__ == '__main__':
     PARSER = argparse.ArgumentParser(prog='letters')
     PARSER.add_argument('-f', '--file', dest='file', action='store')
-    PARSER.add_argument('-v', '--version', action='version', version='%(prog)s 0.2.0')
+    PARSER.add_argument('-v', '--version', action='version', version='%(prog)s 0.2.1')
     ARGS = PARSER.parse_args()
     print(len(sys.argv))
 
